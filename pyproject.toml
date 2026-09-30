@@ -1,0 +1,10 @@
+[project]
+name = "wormhole-aiven"
+version = "0.1.0"
+description = "A Code For Interview"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "opensearch-py>=3.2.0",
+    "python-dotenv>=1.2.3",
+]

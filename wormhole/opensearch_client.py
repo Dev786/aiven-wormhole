@@ -29,6 +29,16 @@ class OpenSearchClient:
         return self.opensearch_client.info()
 
 
+    def get_cluster_health(self):
+        return self.opensearch_client.cluster.health()
+
+
+    def get_indices_info(self):
+        # _cat/indices
+        # filter all starts with dot
+        return self.opensearch_client.indices.get(index="*")
+
+
 @cache
 def get_opensearch_client() -> OpenSearchClient:
     return OpenSearchClient()
